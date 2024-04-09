@@ -13,7 +13,7 @@ now=$(date +"%Y%m%d_%H%M%S")
 ## 3. for 'coco' select: ['1_512', '1_256', '1_128', '1_32']
 
 
-dataset='easypotrait'
+dataset='easyportrait'
 method='allspark'
 split='1_4'
 

@@ -1,8 +1,8 @@
 # arguments for dataset
-dataset: easypotrait
+dataset: easyportrait
 nclass: 9
 crop_size: 513
-data_root: ./EasyPotrait 
+data_root: ./EasyPortrait 
 
 # arguments for training
 epochs: 80
