@@ -1,5 +1,5 @@
 # arguments for dataset
-dataset: faceseg
+dataset: easypotrait
 nclass: 9
 crop_size: 513
 data_root: ./EasyPotrait 
