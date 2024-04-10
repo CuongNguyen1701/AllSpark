@@ -29,6 +29,6 @@ CLASSES = {'pascal': ['background', 'aeroplane', 'bicycle', 'bird', 'boat', 'bot
                     'textile-other', 'towel', 'tree', 'vegetable', 'wall-brick', 'wall-concrete', 'wall-other', 
                     'wall-panel', 'wall-stone', 'wall-tile', 'wall-wood', 'water-other', 'waterdrops',
                     'window-blind', 'window-other', 'wood'],
-            'easypotrait': ["background", "person", "face-skin", "left-eyebrow", "right-eyebrow", 
+            'easyportrait': ["background", "person", "face-skin", "left-eyebrow", "right-eyebrow", 
                             "left-eye", "right-eye", "lips", "teeth"],
            }
