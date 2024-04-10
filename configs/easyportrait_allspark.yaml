@@ -6,7 +6,7 @@ data_root: ./EasyPortrait
 
 # arguments for training
 epochs: 80
-batch_size: 2 # per GPU x 4 GPUs
+batch_size: 16 # per GPU x 4 GPUs
 lr: 0.001
 lr_multi: 10.0
 criterion:
