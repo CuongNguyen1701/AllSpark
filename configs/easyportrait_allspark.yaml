@@ -1,8 +1,8 @@
 # arguments for dataset
 dataset: easyportrait
 nclass: 9
-crop_size: 513
-data_root: ./EasyPortrait 
+crop_size: 257
+data_root: ./EasyPortrait
 
 # arguments for training
 epochs: 80
@@ -32,6 +32,6 @@ model:
       num_heads: 2
       num_class: 9
       in_planes: [64, 128, 320, 512]
-      image_size: 513
+      image_size: 257
       warmup_epoch: 5
       embedding_dim: 768
