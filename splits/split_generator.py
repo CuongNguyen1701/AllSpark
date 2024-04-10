@@ -28,7 +28,9 @@ def main():
             continue
         id = os.path.splitext(f)[0]
         train_ids.append(id)
-
+    print(f"Total number of training images: {len(train_ids)}")
+    labeled_count = 0
+    unlabeled_count = 0
     for id in train_ids:
         if (os.path.exists(os.path.join(train_img_path, id+".jpg")) and os.path.exists(os.path.join(train_ann_path, id+".png"))):
             # write image path and annotation path to the labeled.txt and unlabeled.txt
@@ -36,11 +38,14 @@ def main():
                 with open(f"splits/{dataset_name}/1_{split}/labeled.txt", "a") as f:
                     f.write(
                         f"{os.path.join(train_img_path, id+'.jpg')} {os.path.join(train_ann_path, id+'.png')}\n")
+                labeled_count += 1
             else:
                 with open(f"splits/{dataset_name}/1_{split}/unlabeled.txt", "a") as f:
                     f.write(
                         f"{os.path.join(train_img_path, id+'.jpg')} {os.path.join(train_ann_path, id+'.png')}\n")
-
+                unlabeled_count += 1
+    print(f"Number of labeled images: {labeled_count}")
+    print(f"Number of unlabeled images: {unlabeled_count}")
     val_ids = []
     for f in os.listdir(val_ann_path):
         if not f.endswith(".png"):
@@ -48,6 +53,7 @@ def main():
         id = os.path.splitext(f)[0]
         val_ids.append(id)
 
+    print(f"Number of validation images: {len(val_ids)}")
     for id in val_ids:
         if (os.path.exists(os.path.join(val_img_path, id+".jpg")) and os.path.exists(os.path.join(val_ann_path, id+".png"))):
             with open(f"splits/{dataset_name}/val.txt", "a") as f:
